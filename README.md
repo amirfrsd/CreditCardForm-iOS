@@ -13,7 +13,7 @@ Persian-CreditCardForm is iOS framework that allows developers to create the UI 
 <strong style="color:red">Fixed typo use CreditCardForm instead ~~CreditCardForum~~</strong>
 
 ### Screenshots
-<img src="https://dotjpg.co/8bu.png" width="300"> <img src="Example/Screens/CreditCardDemo.gif" width="300">
+<img src="Example/Screens/CreditCardDemo.png" width="300"> <img src="Example/Screens/CreditCardDemo.gif" width="300">
 
 ## Example
 
