@@ -30,22 +30,6 @@ To run the example project, clone the repo, and run `pod install` from the Demo-
 
 ## Installation
 
-#### Using [CocoaPods](http://cocoapods.org)
-
-CreditCardForm is available through CocoaPods. To install it, simply add the following line to your `Podfile`:
-
-```ruby
-pod "CreditCardForm"
-```
-
-#### Using [Carthage](https://github.com/Carthage/Carthage)
-
-CreditCardForm is available through Carthage. To install it, simply add the following line to your `Cartfile`:
-
-```ruby
-github "orazz/CreditCardForm-iOS"
-```
-
 #### Manually
 
 If you prefer not to use either of the aforementioned dependency managers, you can integrate CreditCardForm into your project manually.
