@@ -8,7 +8,7 @@
 <a href="https://github.com/orazz/CreditCardForm-iOS/blob/master/LICENSE"><img src="http://img.shields.io/badge/license-MIT-blue.svg?style=flat" alt="License: MIT" /></a>
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=GSV5DLQRJ5AH2&lc=US&item_name=Oraz%20Atakishiyev&item_number=PageMenu&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted)
 
-CreditCardForm is iOS framework that allows developers to create the UI which replicates an actual Credit Card.
+Persian-CreditCardForm is iOS framework that allows developers to create the UI which replicates an actual Credit Card.
 
 <strong style="color:red">Fixed typo use CreditCardForm instead ~~CreditCardForum~~</strong>
 
@@ -21,13 +21,7 @@ To run the example project, clone the repo, and run `pod install` from the Demo-
 
 ## Supported Cards
 
-- [x] MasterCard
-- [x] Visa
-- [x] JCB
-- [x] Diners
-- [x] Discover
-- [x] Amex
-- [x] UnionPay
+- [X] پشتیبانی از تمامی بانک های ایرانی
 
 ## Requirements
 
@@ -171,7 +165,9 @@ We would love for you to contribute to **CreditCardForm**, check the ``LICENSE``
 
 ## Meta
 
+Developed by:
 [Oraz Atakishi](https://github.com/orazz), orazz.tm@gmail.com
+Iranian Bank Support by : [Amir Farsad](https://github.com/amirfrsd), amir.farsad@gmail.com
 
 #### 3rd party libraries
 
