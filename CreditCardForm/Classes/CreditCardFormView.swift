@@ -9,7 +9,7 @@
 import UIKit
 
 public enum Brands : String {
-    case NONE, Visa, UnionPay, MasterCard, Amex, JCB, DEFAULT, Discover
+    case NONE, Saman, Tosee, Melal, Kosar, EghtesadNovin, Ansar, Iranzamin, Ayandeh, Parsian, Pasargad, PostBank, Tejarat, ToseTaavon, ToseSaderat, HekmatIranian, Khavarmiane, Dey, Resalat, Refah, Sepah, Sarmayeh, Sina, Shahr, Saderat, SanatMadan, Ghavamin, KarAfarin, Keshavarzi, Gardeshgari, Maskan, Mellat, Melli, MehrIran, MehrEghtesad, Noor
 }
 
 @IBDesignable
@@ -420,7 +420,7 @@ public class CreditCardFormView : UIView {
             if let name = colors[type.name] {
                 if(type.name.lowercased() == "amex".lowercased()){
                     if !amex {
-                        self.cardNumber.maskExpression = "{....} {....} {....} {...}"
+                        self.cardNumber.maskExpression = "{....} {....} {....} {....}"
                         amex = true
                     }
                 }else {
@@ -461,14 +461,41 @@ extension CreditCardFormView {
     
     fileprivate func setBrandColors() {
         colors[Brands.NONE.rawValue] = [defaultCardColor, defaultCardColor]
-        colors[Brands.Visa.rawValue] = [UIColor.hexStr(hexStr: "#5D8BF2", alpha: 1), UIColor.hexStr(hexStr: "#3545AE", alpha: 1)]
-        colors[Brands.MasterCard.rawValue] = [UIColor.hexStr(hexStr: "#ED495A", alpha: 1), UIColor.hexStr(hexStr: "#8B1A2B", alpha: 1)]
-        colors[Brands.UnionPay.rawValue] = [UIColor.hexStr(hexStr: "#987c00", alpha: 1), UIColor.hexStr(hexStr: "#826a01", alpha: 1)]
-        colors[Brands.Amex.rawValue] = [UIColor.hexStr(hexStr: "#005B9D", alpha: 1), UIColor.hexStr(hexStr: "#132972", alpha: 1)]
-        colors[Brands.JCB.rawValue] = [UIColor.hexStr(hexStr: "#265797", alpha: 1), UIColor.hexStr(hexStr: "#3d6eaa", alpha: 1)]
-        colors["Diners Club"] = [UIColor.hexStr(hexStr: "#5b99d8", alpha: 1), UIColor.hexStr(hexStr: "#4186CD", alpha: 1)]
-        colors[Brands.Discover.rawValue] = [UIColor.hexStr(hexStr: "#e8a258", alpha: 1), UIColor.hexStr(hexStr: "#D97B16", alpha: 1)]
-        colors[Brands.DEFAULT.rawValue] = [UIColor.hexStr(hexStr: "#5D8BF2", alpha: 1), UIColor.hexStr(hexStr: "#3545AE", alpha: 1)]
+        colors["بانک سامان"] = [UIColor.hexStr(hexStr: "#5194ff", alpha: 1), UIColor.hexStr(hexStr: "#68a2ff", alpha: 1)]
+        colors["موسسه اعتباري توسعه"] = [UIColor.hexStr(hexStr: "#540000", alpha: 1), UIColor.hexStr(hexStr: "#770000", alpha: 1)]
+        colors["موسسه اعتباري ملل"] = [UIColor.hexStr(hexStr: "#db8700", alpha: 1), UIColor.hexStr(hexStr: "#b77101", alpha: 1)]
+        colors["موسسه اعتباري کوثر"] = [UIColor.hexStr(hexStr: "#722a7f", alpha: 1), UIColor.hexStr(hexStr: "#913da0", alpha: 1)]
+        colors["بانک اقتصادنوين"] = [UIColor.hexStr(hexStr: "#380042", alpha: 1), UIColor.hexStr(hexStr: "#5f0070", alpha: 1)]
+        colors["بانک انصار"] = [UIColor.hexStr(hexStr: "#686868", alpha: 1), UIColor.hexStr(hexStr: "#9b9b9b", alpha: 1)]
+        colors["بانک ايران زمين"] = [UIColor.hexStr(hexStr: "#e3c4ef", alpha: 1), UIColor.hexStr(hexStr: "#efdcf7", alpha: 1)]
+        colors["بانک آينده"] = [UIColor.hexStr(hexStr: "#2d1105", alpha: 1), UIColor.hexStr(hexStr: "#3f2920", alpha: 1)]
+        colors["بانک پارسيان"] = [UIColor.hexStr(hexStr: "#822400", alpha: 1), UIColor.hexStr(hexStr: "#9b2b00", alpha: 1)]
+        colors["بانک پاسارگاد"] = [UIColor.hexStr(hexStr: "#000000", alpha: 1), UIColor.hexStr(hexStr: "#232323", alpha: 1)]
+        colors["پست بانک"] = [UIColor.hexStr(hexStr: "#267200", alpha: 1), UIColor.hexStr(hexStr: "#3c9b0c", alpha: 1)]
+        colors["بانک تجارت"] = [UIColor.hexStr(hexStr: "#3dd0db", alpha: 1), UIColor.hexStr(hexStr: "#62dce5", alpha: 1)]
+        colors["بانک توسعه تعاون"] = [UIColor.hexStr(hexStr: "#2bce87", alpha: 1), UIColor.hexStr(hexStr: "#47d899", alpha: 1)]
+        colors["بانک توسعه صادرات"] = [UIColor.hexStr(hexStr: "#62917d", alpha: 1), UIColor.hexStr(hexStr: "#7bad98", alpha: 1)]
+        colors["بانک حكمت ايرانيان"] = [UIColor.hexStr(hexStr: "#486eaf", alpha: 1), UIColor.hexStr(hexStr: "#6388c6", alpha: 1)]
+        colors["بانک خاورمیانه"] = [UIColor.hexStr(hexStr: "#c1800f", alpha: 1), UIColor.hexStr(hexStr: "#d39528", alpha: 1)]
+        colors["بانک دي"] = [UIColor.hexStr(hexStr: "#12afb7", alpha: 1), UIColor.hexStr(hexStr: "#6bdae0", alpha: 1)]
+        colors["بانک رسالت"] = [UIColor.hexStr(hexStr: "#5bbdff", alpha: 1), UIColor.hexStr(hexStr: "#84cdff", alpha: 1)]
+        colors["بانک رفاه"] = [UIColor.hexStr(hexStr: "#c4c4c4", alpha: 1), UIColor.hexStr(hexStr: "#ededed", alpha: 1)]
+        colors["بانک سپه"] = [UIColor.hexStr(hexStr: "#154daf", alpha: 1), UIColor.hexStr(hexStr: "#2a65cc", alpha: 1)]
+        colors["بانک سرمایه"] = [UIColor.hexStr(hexStr: "#875796", alpha: 1), UIColor.hexStr(hexStr: "#ac70bf", alpha: 1)]
+        colors["بانک سینا"] = [UIColor.hexStr(hexStr: "#af9b00", alpha: 1), UIColor.hexStr(hexStr: "#c1ad11", alpha: 1)]
+        colors["بانک شهر"] = [UIColor.hexStr(hexStr: "#b20200", alpha: 1), UIColor.hexStr(hexStr: "#ce0a08", alpha: 1)]
+        colors["بانک صادرات"] = [UIColor.hexStr(hexStr: "#5bbce5", alpha: 1), UIColor.hexStr(hexStr: "#6dcaf2", alpha: 1)]
+        colors["بانک صنعت و معدن"] = [UIColor.hexStr(hexStr: "#006faf", alpha: 1), UIColor.hexStr(hexStr: "#0886ce", alpha: 1)]
+        colors["بانک قوامین"] = [UIColor.hexStr(hexStr: "#e5e5e5", alpha: 1), UIColor.hexStr(hexStr: "#ffffff", alpha: 1)]
+        colors["بانک کار آفرین"] = [UIColor.hexStr(hexStr: "#6cd153", alpha: 1), UIColor.hexStr(hexStr: "#80e567", alpha: 1)]
+        colors["بانک کشاورزی"] = [UIColor.hexStr(hexStr: "#9bc16c", alpha: 1), UIColor.hexStr(hexStr: "#bfe590", alpha: 1)]
+        colors["بانک گردشگری"] = [UIColor.hexStr(hexStr: "#7f0f0f", alpha: 1), UIColor.hexStr(hexStr: "#ad2b2b", alpha: 1)]
+        colors["بانک مسکن"] = [UIColor.hexStr(hexStr: "#e85c00", alpha: 1), UIColor.hexStr(hexStr: "#ed7628", alpha: 1)]
+        colors["بانک ملت"] = [UIColor.hexStr(hexStr: "#ff9ec8", alpha: 1), UIColor.hexStr(hexStr: "#ffc4dd", alpha: 1)]
+        colors["بانک ملی"] = [UIColor.hexStr(hexStr: "#1775c1", alpha: 1), UIColor.hexStr(hexStr: "#3a92d8", alpha: 1)]
+        colors["بانک مهر ایران"] = [UIColor.hexStr(hexStr: "#90e056", alpha: 1), UIColor.hexStr(hexStr: "#9fe070", alpha: 1)]
+        colors["بانک مهر اقتصاد"] = [UIColor.hexStr(hexStr: "#9e9331", alpha: 1), UIColor.hexStr(hexStr: "#c9bd50", alpha: 1)]
+        colors["موسسه اعتباری نور"] = [UIColor.hexStr(hexStr: "#7dd7d8", alpha: 1), UIColor.hexStr(hexStr: "#99e4e5", alpha: 1)]
     }
 }
 
