@@ -12,6 +12,14 @@ Persian-CreditCardForm is iOS framework that allows developers to create the UI 
 
 <strong style="color:red">Fixed typo use CreditCardForm instead ~~CreditCardForum~~</strong>
 
+## Shetab Card Validator Usage Guide
+``` swift
+import CreditCardForm
+
+CreditCardValidator().validate(string: "SHETAB CARD NUMBER - 16 CHAR")
+```
+this function will throw a Boolean
+
 ### Screenshots
 <img src="Example/Screens/CreditCardDemo.png" width="300"> <img src="Example/Screens/CreditCardDemo.gif" width="300">
 
