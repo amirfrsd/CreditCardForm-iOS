@@ -47,6 +47,7 @@ If you prefer not to use either of the aforementioned dependency managers, you c
 
 ## Usage example
 
+Check out this repo : https://github.com/amirfrsd/ShetabCreditCardForm-Example
 First step: this framework integrated with Stripe, you must install [Stripe](https://stripe.com/docs/mobile/ios)
 
 #### Storyboard
