@@ -46,9 +46,10 @@ public class CreditCardValidator {
     */
     public func validate(string: String) -> Bool {
         let length: Int? = string.count
-        let subString = string.substring(location: 15, length: 1)
-        let subStringOne = string.substring(location: 1, length: 10)
-        let subStringTwo = string.substring(location: 10, length: 6)
+        var tempString = string.replacingOccurrences(of: " ", with: "")
+        let subString = tempString.substring(location: 15, length: 1)
+        let subStringOne = tempString.substring(location: 1, length: 10)
+        let subStringTwo = tempString.substring(location: 10, length: 6)
         var s: Int = 0
         var k: Int = 0
         var d: Int = 0
@@ -56,7 +57,7 @@ public class CreditCardValidator {
             return false
         }
         for i in 0..<16 {
-            let subStr = string.substring(location: i, length: 1)
+            let subStr = tempString.substring(location: i, length: 1)
             k = (i % 2 == 0) ? 2 : 1
             d = Int(subStr!)! * k
             s += (d > 9) ? d - 9 : d
