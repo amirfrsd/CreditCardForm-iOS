@@ -45,32 +45,23 @@ public class CreditCardValidator {
     - returns: true or false
     */
     public func validate(string: String) -> Bool {
-        let numbers = self.onlyNumbers(string: string)
-        if numbers.count < 9 {
+        let length: Int? = string.count
+        let subString = string.substring(location: 15, length: 1)
+        let subStringOne = string.substring(location: 1, length: 10)
+        let subStringTwo = string.substring(location: 10, length: 6)
+        var s: Int = 0
+        var k: Int = 0
+        var d: Int = 0
+        if (length! < 16 || Int(subStringOne!) == 0 || Int(subStringTwo!) == 0) {
             return false
         }
-        
-        var reversedString = ""
-        let range: Range<String.Index> = numbers.startIndex..<numbers.endIndex
-        
-        numbers.enumerateSubstrings(in: range, options: [.reverse, .byComposedCharacterSequences]) { (substring, substringRange, enclosingRange, stop) -> () in
-            reversedString += substring!
+        for i in 0..<16 {
+            let subStr = string.substring(location: i, length: 1)
+            k = (i % 2 == 0) ? 2 : 1
+            d = Int(subStr!)! * k
+            s += (d > 9) ? d - 9 : d
         }
-        
-        var oddSum = 0, evenSum = 0
-        let reversedArray = reversedString
-        
-        for (i, s) in reversedArray.enumerated() {
-            
-            let digit = Int(String(s))!
-            
-            if i % 2 == 0 {
-                evenSum += digit
-            } else {
-                oddSum += digit / 5 + (2 * digit) % 10
-            }
-        }
-        return (oddSum + evenSum) % 10 == 0
+        return (s % 10) == 0
     }
     
     /**
